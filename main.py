@@ -4,12 +4,15 @@ from stats import main
 from stats import get_num_words
 from stats import num_letters
 from stats import sort_on
-words = num_letters()
-main()
-list = []
+
 if len(sys.argv) != 2:
 	print ("Usage: python3 main.py <path_to_book>")
 	sys.exit(1)
+
+words = num_letters()
+main()
+list = []
+
 for key in words:
   values = words[key]
   list.append({"char" : key, "num" : values})
